@@ -1,0 +1,25 @@
+name: Cache Configuration Files
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Cache configuration files
+      uses: actions/cache@v3
+      with:
+        path: |
+          .env
+          .htaccess
+          models/.env
+        key: ${{ runner.os }}-config-${{ github.sha }}
+        restore-keys: |
+          ${{ runner.os }}-config- 

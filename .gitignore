@@ -16,6 +16,7 @@ uploads/
 *.bak
 
 # 📌 Ignorer les fichiers système et serveur
+.env
 .htaccess
 
 # 📌 Ignorer les fichiers des éditeurs et outils de développement
@@ -29,3 +30,30 @@ uploads/
 .DS_Store
 Thumbs.db
 *.swp
+
+# Dependencies
+/vendor/
+/node_modules/
+
+# Cache files
+*.cache
+*.log
+
+# Environment files
+.env.local
+.env.*.local
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Keep product images directory but ignore its contents
+/public/uploads/products/*
+!/public/uploads/products/.gitkeep
+!/public/uploads/products/default.jpg
