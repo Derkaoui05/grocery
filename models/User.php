@@ -95,4 +95,11 @@ class User extends Model {
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC)['count'];
     }
+
+    public function findAll() {
+        $sql = "SELECT * FROM {$this->table} ORDER BY created_at DESC";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 } 

@@ -73,4 +73,4 @@ $content = '
 </div>
 ';
 
-require_once 'layouts/main.php'; 
+require_once 'views/layouts/main.php'; 
