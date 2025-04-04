@@ -1,0 +1,31 @@
+# 📌 Ignorer le fichier d'environnement dans models/
+models/.env
+
+# 📌 Ignorer les fichiers de cache, logs et sessions
+*.log
+cache/
+logs/
+sessions/
+tmp/
+uploads/
+
+# 📌 Ignorer les fichiers de base de données locales
+*.sql
+*.sqlite
+*.db
+*.bak
+
+# 📌 Ignorer les fichiers système et serveur
+.htaccess
+
+# 📌 Ignorer les fichiers des éditeurs et outils de développement
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.iml
+
+# 📌 Ignorer les fichiers système inutiles (Windows, Mac, Linux)
+.DS_Store
+Thumbs.db
+*.swp
